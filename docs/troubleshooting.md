@@ -1,35 +1,35 @@
-# Diagnóstico y solución de problemas
+# Troubleshooting
 
-## El dispositivo aparece como no disponible
+## The device is unavailable
 
-1. Comprueba que Home Assistant tiene acceso a Internet.
-2. Verifica que la API key, el `secuid`, el user token y el Site ID siguen
-   vigentes en el portal Livoltek.
-3. Abre **Configuración > Dispositivos y servicios > Livoltek** y revisa los
-   diagnósticos o vuelve a configurar la entrada.
-4. Revisa los registros de Home Assistant buscando `custom_components.livoltek`
-   y `pylivoltek`.
+1. Confirm that Home Assistant has Internet access.
+2. Check that the API key, `secuid`, user token and Site ID are still valid in
+   the Livoltek portal.
+3. Open **Settings > Devices & services > Livoltek** and review diagnostics or
+   use the integration's reconfigure action.
+4. Check the Home Assistant log for `custom_components.livoltek` and
+   `pylivoltek`.
 
-## Hay datos durante el día, pero no por la noche
+## Data is available during the day but not at night
 
-Es normal que algunos inversores o portales dejen de entregar datos cuando el
-inversor está apagado. Esta adaptación conserva el último dato válido y evita
-tratar una respuesta vacía temporal como una pérdida definitiva de datos.
+Some inverters or cloud portals stop returning measurements while the inverter
+is off. This maintained version retains the last valid values and avoids
+interpreting a temporary empty response as a permanent failure.
 
-## El token parece haber caducado
+## The token appears to have expired
 
-La integración intenta renovar la sesión después de respuestas vacías
-repetidas. Si el problema persiste, genera un nuevo token desde el portal y
-actualiza la configuración de la integración.
+The integration attempts session recovery after repeated empty responses. If
+the problem continues, generate a new token in the Livoltek portal and use the
+integration's reconfigure action.
 
-## Qué adjuntar en un informe
+## What to include in a bug report
 
-- versión de Home Assistant;
-- versión de Livoltek;
-- modelo del inversor;
-- fecha y hora aproximadas del fallo;
-- diagnóstico descargado desde la integración;
-- fragmento relevante del registro sin credenciales.
+- Home Assistant version;
+- Livoltek integration version;
+- inverter model;
+- approximate date and time of the failure;
+- diagnostics downloaded from the integration;
+- relevant sanitized log lines.
 
-Nunca publiques API keys, tokens, contraseñas, `secuid` completos ni capturas
-que los contengan.
+Never include API keys, tokens, passwords, complete `secuid` values or private
+screenshots.

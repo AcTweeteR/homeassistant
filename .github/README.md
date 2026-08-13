@@ -1,10 +1,10 @@
-# Automatización del repositorio
+# Repository automation
 
-Los workflows de esta carpeta mantienen la calidad del proyecto:
+The files in this directory maintain project quality and support:
 
-- `validate.yml`: ejecuta Hassfest y la validación de HACS.
-- `lint.yml`: comprueba el estilo Python con Ruff.
-- `release.yml`: genera el ZIP de Livoltek y lo adjunta a cada release.
+- `workflows/validate.yml`: runs Hassfest and HACS validation;
+- `workflows/lint.yml`: checks Python style with Ruff;
+- `workflows/release.yml`: packages Livoltek and attaches its ZIP to releases;
+- `ISSUE_TEMPLATE/`: collects reproducible bug reports and feature requests.
 
-Las plantillas de issues ayudan a recopilar informes reproducibles sin pedir
-credenciales sensibles.
+Issue templates remind contributors to remove credentials and private data.

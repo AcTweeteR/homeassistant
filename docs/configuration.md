@@ -1,30 +1,35 @@
-# Configuración de Livoltek
+# Livoltek configuration
 
-La configuración se realiza desde la interfaz de Home Assistant. No es
-necesario editar `configuration.yaml`.
+Configuration is performed from the Home Assistant UI. Editing
+`configuration.yaml` is not required.
 
-## Datos necesarios
+## Required portal values
 
-El portal de Livoltek debe proporcionar:
+The Livoltek portal must provide:
 
-| Campo | Uso |
-| --- | --- |
-| API key | Autenticación de la API cloud |
-| `secuid` | Identificador de usuario o sesión del portal |
-| User token | Token asociado a la cuenta |
-| Site ID | Identificador de la instalación que se consultará |
+| Field | Purpose | Sensitivity |
+| --- | --- | --- |
+| API key | Authenticates cloud API requests | Secret |
+| `secuid` | User or session identifier | Sensitive |
+| User token | Account/session token | Secret |
+| Site ID | Selects the installation to poll | Sensitive |
 
-En **Configuración > Dispositivos y servicios**, añade la integración Livoltek
-y completa los campos solicitados. La integración crea un dispositivo por
-instalación y consulta sus datos periódicamente.
+Go to **Settings > Devices & services**, add the Livoltek integration and
+complete the fields requested by the config flow. The integration creates one
+Home Assistant device for the selected installation and polls it periodically.
 
-## Comportamiento esperado
+## Expected behavior
 
-- La consulta utiliza cloud polling con un intervalo aproximado de 2 minutos y
-  30 segundos.
-- Si el portal devuelve una respuesta vacía durante la noche o mientras el
-  inversor está apagado, se conserva el último valor válido cuando es posible.
-- Si la sesión cloud caduca y el portal devuelve listas vacías repetidas, se
-  intenta renovar el token antes de marcar el dispositivo como no disponible.
-- Los sensores de energía diaria se publican como `total_increasing` para que
-  Home Assistant pueda utilizarlos en el panel Energía.
+- Cloud polling runs approximately every 2 minutes and 30 seconds.
+- If the portal returns an empty response overnight or while the inverter is
+  off, the last valid value is retained when possible.
+- If the cloud session expires and repeated empty device lists are returned, the
+  integration attempts token recovery before marking the device unavailable.
+- Daily energy sensors use `total_increasing` so they can be used by the Home
+  Assistant Energy dashboard.
+
+## Configuration changes
+
+To change credentials, open the Livoltek integration entry in **Settings >
+Devices & services** and use its reconfigure action. Do not copy tokens into
+`configuration.yaml`, issue reports or dashboard screenshots.

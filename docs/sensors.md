@@ -1,20 +1,27 @@
-# Entidades y sensores
+# Entities and sensors
 
-La integración crea sensores asociados al dispositivo Livoltek detectado.
-Los nombres exactos pueden variar según el nombre de la instalación y la
-versión del portal.
+The integration creates sensors associated with the Livoltek device. Exact
+entity names depend on the installation name and data returned by the portal.
 
-| Tipo de dato | Unidad | Descripción |
+| Measurement | Unit | Description |
 | --- | --- | --- |
-| Estado de batería | `%` | Nivel de carga de la batería |
-| Potencia de red | `kW` | Potencia importada o exportada en el punto de red |
-| Potencia fotovoltaica | `kW` | Producción solar instantánea |
-| Potencia de carga | `kW` | Potencia destinada a cargar la batería |
-| Potencia energética | `kW` | Dato de potencia energética comunicado por el portal |
-| Energía importada | `kWh` | Energía diaria importada de la red |
-| Energía exportada | `kWh` | Energía diaria vertida a la red |
-| Generación solar | `kWh` | Energía solar generada durante el día |
+| Battery state | `%` | Battery state of charge |
+| Grid power | `kW` | Import or export power at the grid connection |
+| PV power | `kW` | Instantaneous solar production |
+| Charge power | `kW` | Power sent to charge the battery |
+| Energy power | `kW` | Energy power reported by the portal |
+| Grid import energy | `kWh` | Daily energy imported from the grid |
+| Grid export energy | `kWh` | Daily energy exported to the grid |
+| Solar generation | `kWh` | Daily solar energy generation |
 
-Los sensores diarios de energía están preparados para el panel Energía de
-Home Assistant. La disponibilidad depende de que el portal Livoltek entregue
-datos para el dispositivo y el periodo consultado.
+Daily energy sensors are prepared for the Home Assistant Energy dashboard. Their
+availability depends on the portal providing data for the selected device and
+period.
+
+## Availability and historical data
+
+Some Livoltek inverters stop reporting when they are powered down overnight.
+The integration keeps the last valid value when possible, but it cannot create
+new measurements while the cloud service provides no data. This is different
+from a live network failure and should be interpreted alongside the sensor
+availability state.

@@ -1,7 +1,7 @@
-# Pruebas
+# Test suite
 
-Las pruebas de esta carpeta cubren el flujo de configuración, el coordinador,
-los diagnósticos, los sensores y las respuestas defensivas de la API.
+The tests cover configuration flow, coordinator behavior, diagnostics, sensor
+creation and defensive handling of cloud API responses.
 
-Ejecuta `pytest` desde la raíz del repositorio. Las pruebas no requieren
-credenciales reales de Livoltek.
+Run `pytest` from the repository root. The suite uses fixtures and does not
+require real Livoltek credentials or a live inverter.

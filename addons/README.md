@@ -1,18 +1,15 @@
-# Complementos de Home Assistant OS
+# Home Assistant OS add-ons
 
-Esta carpeta queda reservada para futuros add-ons mantenidos en este repositorio.
-Actualmente no forma parte de la distribución de la integración Livoltek ni se
-publica como repositorio de la tienda de complementos.
+This directory is reserved for future real add-ons maintained in this
+repository. It is not currently part of Livoltek's HACS distribution and this
+repository is not published to the Home Assistant add-on store.
 
-Actualmente no hay ningún add-on publicado aquí. Livoltek es una integración de
-HACS y no debe copiarse a esta carpeta.
+Each future add-on must have its own directory, for example
+`addons/my_addon/`, containing at least:
 
-Cada futuro add-on deberá tener una carpeta propia, por ejemplo
-`addons/mi_addon/`, con al menos:
+- `config.yaml` with official add-on metadata;
+- a `Dockerfile` or a valid container image reference;
+- a `README.md` covering installation, configuration, permissions and support;
+- every file required to build and run the add-on.
 
-- `config.yaml`, con los metadatos oficiales del add-on;
-- `Dockerfile` o una imagen válida;
-- `README.md`, con instalación, configuración, permisos y soporte;
-- todos los archivos necesarios para construirlo y ejecutarlo.
-
-No guardes copias de seguridad, builds ni carpetas temporales bajo `addons/`.
+Do not store backups, build output or temporary directories under `addons/`.

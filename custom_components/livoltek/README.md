@@ -1,12 +1,14 @@
-# Livoltek
+# Livoltek integration package
 
-Esta carpeta contiene la integración de Livoltek para Home Assistant. El
-README principal y las guías de usuario están en la raíz del repositorio:
+This directory contains the Home Assistant integration package: Python setup,
+config flow, coordinator, entities, diagnostics, translations and manifest.
 
-- [Instalación](../../docs/installation.md)
-- [Configuración](../../docs/configuration.md)
-- [Entidades](../../docs/sensors.md)
-- [Diagnóstico](../../docs/troubleshooting.md)
+User documentation is maintained at repository level:
 
-No instales esta carpeta como add-on. Para usarla mediante HACS, añade el
-repositorio `AcTweeteR/homeassistant` como integración personalizada.
+- [Installation](../../docs/installation.md)
+- [Configuration](../../docs/configuration.md)
+- [Entities and sensors](../../docs/sensors.md)
+- [Troubleshooting](../../docs/troubleshooting.md)
+
+This directory must be installed as `custom_components/livoltek/` by HACS. It
+is not a Home Assistant OS add-on and must not be copied into `addons/`.

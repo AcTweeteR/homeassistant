@@ -1,14 +1,13 @@
-# Scripts de desarrollo
+# Development scripts
 
-Esta carpeta contiene utilidades heredadas del entorno de desarrollo de la
-integración:
+This directory contains utilities inherited from the integration development
+environment:
 
-- `setup`: prepara dependencias y el entorno local.
-- `develop`: inicia el entorno de desarrollo.
-- `lint`: ejecuta las comprobaciones de estilo.
-- `rebuild.sh`: reconstruye el entorno cuando cambian sus dependencias.
-- `cli-gen.sh` y `cli-gen-opts.json`: soporte del entorno de desarrollo.
-- `pip_packages`: referencia de paquetes utilizados por el entorno.
+- `setup`: prepares the local virtual environment and dependencies;
+- `develop`: starts the development Home Assistant instance;
+- `lint`: runs style checks;
+- `rebuild.sh`: rebuilds the development environment after dependency changes;
+- `cli-gen.sh` and `cli-gen-opts.json`: API-client generation support;
+- `pip_packages`: reference package list for the development environment.
 
-Los scripts son herramientas de desarrollo y no forman parte de la instalación
-de HACS.
+These scripts are development tools and are not used by HACS at runtime.

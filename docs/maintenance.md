@@ -1,27 +1,24 @@
-# Mantenimiento
+# Maintenance
 
-## Actualizar con HACS
+## Update with HACS
 
-HACS mostrará las nuevas versiones en su panel de actualizaciones. Revisa el
-`CHANGELOG.md`, actualiza la integración y reinicia Home Assistant si HACS lo
-indica.
+HACS exposes new releases in its update panel. Review `CHANGELOG.md`, update
+the integration and restart Home Assistant when HACS requests it.
 
-## Antes de actualizar
+## Before updating
 
-- Comprueba que existe una copia de seguridad reciente de Home Assistant.
-- Anota la versión actual de Home Assistant y Livoltek.
-- Revisa los cambios de `CHANGELOG.md`.
+- Confirm that a recent Home Assistant backup exists.
+- Record the current Home Assistant and Livoltek versions.
+- Review the release notes in `CHANGELOG.md`.
 
-## Volver atrás
+## Roll back
 
-Si una versión provoca un problema, utiliza la opción de descarga de versión
-de HACS para instalar la última versión conocida como estable y reinicia Home
-Assistant. Conserva los datos de configuración de la integración antes de
-eliminar una entrada.
+If a release causes a problem, use HACS's version selector to install the last
+known-good release and restart Home Assistant. Keep the integration's device
+configuration intact unless the issue explicitly requires reconfiguration.
 
-## Seguridad
+## Security and privacy
 
-La integración consulta el servicio cloud de Livoltek. No contiene credenciales
-predeterminadas, no abre puertos entrantes y no ejecuta órdenes sobre el
-inversor. Protege especialmente los tokens y las copias de seguridad de Home
-Assistant.
+The integration queries Livoltek's cloud service. It has no default credentials,
+opens no inbound ports and does not send inverter control commands. Protect
+tokens, diagnostics and Home Assistant backups as private data.

@@ -1,32 +1,32 @@
-# Instalación
+# Installation
 
-## Integración Livoltek con HACS
+## Install Livoltek with HACS
 
-La integración es una integración personalizada de Home Assistant, no un
-add-on. HACS instala sus archivos en `custom_components/livoltek/`.
+Livoltek is a custom Home Assistant integration, not an add-on. HACS installs
+its files under `custom_components/livoltek/`.
 
-### Instalación rápida
+### Recommended installation
 
-[![Añadir a HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=AcTweeteR&repository=homeassistant&category=integration)
+[![Open in HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=AcTweeteR&repository=homeassistant&category=integration)
 
-1. Abre el enlace anterior o entra en **HACS > Integraciones**.
-2. Busca **Livoltek**.
-3. Pulsa **Descargar** y reinicia Home Assistant cuando HACS lo solicite.
-4. Ve a **Configuración > Dispositivos y servicios > Añadir integración**.
-5. Busca **Livoltek** y completa el formulario.
+1. Open the button above or go to **HACS > Integrations**.
+2. Search for **Livoltek**.
+3. Select **Download** and restart Home Assistant if requested.
+4. Go to **Settings > Devices & services > Add integration**.
+5. Search for **Livoltek** and complete the form.
 
-### Repositorio personalizado
+### Custom repository installation
 
-Si Livoltek todavía no aparece en el catálogo de HACS:
+If Livoltek is not yet listed in the HACS catalog:
 
-1. Abre **HACS > Integraciones > menú de tres puntos > Repositorios personalizados**.
-2. Añade `https://github.com/AcTweeteR/homeassistant`.
-3. Selecciona la categoría **Integración**.
-4. Instala **Livoltek** y reinicia Home Assistant.
+1. Open **HACS > Integrations > three-dot menu > Custom repositories**.
+2. Add `https://github.com/AcTweeteR/homeassistant`.
+3. Select category **Integration**.
+4. Install Livoltek and restart Home Assistant.
 
-## Futuros complementos
+## Home Assistant add-on store
 
-Actualmente este repositorio no se publica como repositorio de la tienda de
-complementos. Livoltek es una integración HACS y no aparecerá en esa tienda.
-Si en el futuro se añade un complemento real dentro de `addons/`, se publicará
-entonces la metadata oficial y se documentará su instalación por separado.
+This repository is intentionally not published as an add-on repository. The
+Livoltek project is an integration and will not appear in the add-on store. If
+a real add-on is added under `addons/` in the future, repository metadata and
+separate installation instructions will be published at that time.
