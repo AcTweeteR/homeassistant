@@ -1,0 +1,26 @@
+# Python virtual environments
+venv/
+.venv/
+env/
+.python-version
+
+# artifacts
+__pycache__
+.pytest*
+*.egg-info
+*/build/*
+*/dist/*
+
+*.whl
+
+# misc
+.coverage
+coverage.xml
+.env
+
+/out
+venv/
+
+# Home Assistant configuration
+config/*
+!config/configuration.yaml

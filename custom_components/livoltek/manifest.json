@@ -1,0 +1,16 @@
+{
+  "domain": "livoltek",
+  "name": "Livoltek",
+  "codeowners": [
+    "@AcTweeteR"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/AcTweeteR/homeassistant",
+  "integration_type": "device",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/AcTweeteR/homeassistant/issues",
+  "requirements": [
+    "pylivoltek==1.0.9"
+  ],
+  "version": "1.0.0"
+}
