@@ -1,9 +1,9 @@
 # Documentación
 
 Esta carpeta reúne la documentación mantenida del repositorio. La integración
-Livoltek se instala con HACS; los complementos de Home Assistant OS que se
-publiquen en el futuro vivirán bajo `addons/` y se instalarán desde la tienda
-de complementos.
+Livoltek se instala con HACS. `addons/` queda reservado para posibles proyectos
+futuros, pero actualmente no se publica como repositorio de la tienda de
+complementos.
 
 ## Guías
 

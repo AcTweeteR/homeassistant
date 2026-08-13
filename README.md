@@ -6,17 +6,15 @@
 [![HACS](https://img.shields.io/badge/HACS-custom%20integration-41BDF5.svg)](https://hacs.xyz/)
 [![License](https://img.shields.io/github/license/AcTweeteR/homeassistant)](LICENSE)
 
-Repositorio público para integraciones y futuros complementos de Home Assistant
-mantenidos por **AcTweeteR**. Está preparado para dos ecosistemas distintos:
+Repositorio público para integraciones de Home Assistant mantenidas por
+**AcTweeteR**. La integración Livoltek se distribuye mediante HACS.
 
 | Proyecto | Instalación | Estado |
 | --- | --- | --- |
 | Integración **Livoltek** | HACS | Disponible |
-| Futuros add-ons de Home Assistant OS | Tienda de complementos | Estructura preparada |
 
 > **Importante:** Livoltek es una integración de Home Assistant, no un add-on.
-> Se instala con HACS. La tienda de complementos solo mostrará proyectos que
-> se publiquen dentro de `addons/` con un `config.yaml` válido.
+> Se instala con HACS.
 
 ## Instalación rápida
 
@@ -37,26 +35,6 @@ personalizados**, con categoría **Integración**:
 ```text
 https://github.com/AcTweeteR/homeassistant
 ```
-
-### Tienda de complementos de Home Assistant OS
-
-[![Añadir repositorio a Home Assistant](https://my.home-assistant.io/badges/supervisor_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FAcTweeteR%2Fhomeassistant)
-
-El repositorio incluye el `repository.yaml` oficial y puede añadirse desde:
-
-**Configuración > Complementos > Tienda de complementos > menú de tres puntos >
-Repositorios**
-
-También se puede pegar manualmente:
-
-```text
-https://github.com/AcTweeteR/homeassistant
-```
-
-Esta acción deja preparado el catálogo para futuros complementos. Actualmente
-no se publica un add-on ficticio: crear uno vacío daría una falsa sensación de
-instalación funcional. Cuando se publique el primero, aparecerá bajo
-`addons/<slug>/` y quedará disponible en la misma tienda.
 
 ## Integración Livoltek
 
@@ -107,7 +85,7 @@ en [LICENSE](LICENSE).
 
 | Documento | Contenido |
 | --- | --- |
-| [Instalación](docs/installation.md) | HACS, repositorios personalizados y tienda de add-ons |
+| [Instalación](docs/installation.md) | HACS y repositorios personalizados |
 | [Configuración](docs/configuration.md) | Credenciales y comportamiento cloud |
 | [Entidades](docs/sensors.md) | Sensores, unidades y panel Energía |
 | [Diagnóstico](docs/troubleshooting.md) | Problemas frecuentes y datos seguros para soporte |
@@ -121,7 +99,7 @@ en [LICENSE](LICENSE).
 ```text
 custom_components/livoltek/  Código de la integración HACS
 tests/                        Pruebas automatizadas sin credenciales reales
-addons/                       Futuros complementos para Home Assistant OS
+addons/                       Espacio reservado para futuros complementos
 docs/                         Documentación de instalación y mantenimiento
 .github/                      Workflows, plantillas de issues y automatización
 config/                       Configuración de ejemplo para desarrollo

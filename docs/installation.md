@@ -24,14 +24,9 @@ Si Livoltek todavía no aparece en el catálogo de HACS:
 3. Selecciona la categoría **Integración**.
 4. Instala **Livoltek** y reinicia Home Assistant.
 
-## Tienda de complementos de Home Assistant OS
+## Futuros complementos
 
-[![Añadir repositorio de complementos](https://my.home-assistant.io/badges/supervisor_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FAcTweeteR%2Fhomeassistant)
-
-El repositorio incluye `repository.yaml` y puede añadirse desde **Configuración
-> Complementos > Tienda de complementos > menú de tres puntos > Repositorios**.
-
-Esta vía es independiente de HACS. Livoltek no aparecerá como complemento,
-porque es una integración que se instala en `custom_components/`. Solo los
-futuros proyectos con una carpeta propia dentro de `addons/` y un `config.yaml`
-válido aparecerán como complementos instalables.
+Actualmente este repositorio no se publica como repositorio de la tienda de
+complementos. Livoltek es una integración HACS y no aparecerá en esa tienda.
+Si en el futuro se añade un complemento real dentro de `addons/`, se publicará
+entonces la metadata oficial y se documentará su instalación por separado.

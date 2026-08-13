@@ -1,8 +1,9 @@
 # Contribution guidelines
 
 This repository is maintained by AcTweeteR and may contain multiple Home
-Assistant integrations and add-ons. Keep each integration under
-`custom_components/<domain>/` and each add-on under `addons/<slug>/`.
+Assistant integrations. Keep each integration under
+`custom_components/<domain>/`. The `addons/` directory is reserved for a future
+real add-on and is not currently distributed through the add-on store.
 
 Contributing to this project should be as easy and transparent as possible, whether it's:
 

@@ -5,7 +5,7 @@
 ```text
 custom_components/livoltek/  Integración de Home Assistant
 tests/                        Pruebas automatizadas
-addons/                       Futuros complementos de Home Assistant OS
+addons/                       Espacio reservado para futuros complementos
 docs/                         Documentación de usuario y mantenimiento
 .github/workflows/            Validación, lint y publicación de releases
 ```
@@ -23,7 +23,8 @@ sea posible.
 
 ## Añadir un futuro complemento
 
-Crea `addons/<slug>/config.yaml` y añade todos los archivos necesarios para
-construirlo y ejecutarlo. Documenta su instalación y permisos en un README
-propio. No coloques copias de seguridad ni carpetas temporales dentro de
-`addons/`.
+Si algún día se publica un complemento real, crea `addons/<slug>/config.yaml` y
+añade todos los archivos necesarios para construirlo y ejecutarlo. En ese
+momento habrá que añadir de nuevo la metadata de repositorio para la tienda de
+Home Assistant OS y documentar su instalación y permisos en un README propio.
+No coloques copias de seguridad ni carpetas temporales dentro de `addons/`.

@@ -1,8 +1,8 @@
 # Complementos de Home Assistant OS
 
-Esta carpeta está reservada para futuros add-ons mantenidos en este repositorio.
-El repositorio ya incluye el `repository.yaml` oficial en su raíz, por lo que
-puede añadirse a la tienda de complementos de Home Assistant OS.
+Esta carpeta queda reservada para futuros add-ons mantenidos en este repositorio.
+Actualmente no forma parte de la distribución de la integración Livoltek ni se
+publica como repositorio de la tienda de complementos.
 
 Actualmente no hay ningún add-on publicado aquí. Livoltek es una integración de
 HACS y no debe copiarse a esta carpeta.
