@@ -17,9 +17,7 @@ from pylivoltek.models import (
     CurrentPowerFlow,
     DeviceDetails,
     DeviceList,
-    GridImportExportList,
     Site,
-    SolarGenerationtList,
 )
 from pylivoltek.rest import ApiException
 
