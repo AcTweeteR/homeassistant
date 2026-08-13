@@ -13,3 +13,5 @@ not currently published as an add-on repository.
 - [Troubleshooting](troubleshooting.md): common failures and safe diagnostics.
 - [Maintenance](maintenance.md): updates, backups and rollback.
 - [Development](development.md): repository layout, checks and pull requests.
+- [Integration reference](integration-reference.md): complete catalog of files,
+  entities and runtime behavior.

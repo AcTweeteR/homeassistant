@@ -7,6 +7,8 @@ las instrucciones técnicas se mantienen en inglés en el [README principal](REA
 
 [![Abrir en HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=AcTweeteR&repository=homeassistant&category=integration)
 
+**[Añadir Livoltek a HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=AcTweeteR&repository=homeassistant&category=integration)**
+
 1. Abre el botón anterior o entra en **HACS > Integraciones**.
 2. Busca **Livoltek** y pulsa **Descargar**.
 3. Reinicia Home Assistant si HACS lo solicita.
