@@ -1,9 +1,8 @@
 # Contribution guidelines
 
-This repository is maintained by AcTweeteR and may contain multiple Home
-Assistant integrations. Keep each integration under
-`custom_components/<domain>/`. The `addons/` directory is reserved for a future
-real add-on and is not currently distributed through the add-on store.
+This repository is maintained by AcTweeteR and is dedicated to the Livoltek
+Home Assistant integration. New integrations and add-ons should use separate
+repositories so each HACS project has a clear installation scope.
 
 Contributing to this project should be as easy and transparent as possible, whether it's:
 
@@ -18,7 +17,7 @@ Github is used to host code, to track issues and feature requests, as well as ac
 
 Pull requests are the best way to propose changes to the codebase.
 
-1. Fork the repo and create your branch from `main`.
+1. Fork the repository and create your branch from `main`.
 2. If you've changed something, update the documentation.
 3. Make sure your code lints (using `scripts/lint`).
 4. Test you contribution.

@@ -8,3 +8,6 @@ The files in this directory maintain project quality and support:
 - `ISSUE_TEMPLATE/`: collects reproducible bug reports and feature requests.
 
 Issue templates remind contributors to remove credentials and private data.
+
+This workflow set belongs only to the Livoltek integration. Each future
+integration will have its own repository and independent validation history.

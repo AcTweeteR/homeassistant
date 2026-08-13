@@ -11,8 +11,8 @@ installation: what is available, and what will change in Home Assistant.
 | `livoltek` | Livoltek | Device integration | HACS | HTTPS cloud polling |
 
 There are no published add-ons, dashboards, cards, automations, services or
-other integrations in this repository. `addons/` is intentionally empty apart
-from its documentation file.
+other integrations in this repository. This repository is intentionally
+dedicated to Livoltek.
 
 ## What HACS installs
 
@@ -82,8 +82,6 @@ Assistant therefore keeps entities stable when the display name changes.
 | `config/` | Contributors | Local development configuration |
 | `scripts/` | Contributors | Setup, lint and development helpers |
 | `.github/workflows/` | Maintainers | HACS, Hassfest, Ruff and release automation |
-| `addons/` | Future maintainers | Reserved for a future real add-on |
-
 ## Validation and release artifacts
 
 Every push to `main` runs HACS validation, Hassfest validation and Ruff linting.

@@ -5,9 +5,9 @@ las instrucciones técnicas se mantienen en inglés en el [README principal](REA
 
 ## Instalación con HACS
 
-[![Abrir en HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=AcTweeteR&repository=homeassistant&category=integration)
+[![Abrir en HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=AcTweeteR&repository=hass-livoltek&category=integration)
 
-**[Añadir Livoltek a HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=AcTweeteR&repository=homeassistant&category=integration)**
+**[Añadir Livoltek a HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=AcTweeteR&repository=hass-livoltek&category=integration)**
 
 1. Abre el botón anterior o entra en **HACS > Integraciones**.
 2. Busca **Livoltek** y pulsa **Descargar**.
@@ -18,7 +18,7 @@ las instrucciones técnicas se mantienen en inglés en el [README principal](REA
 Si no aparece en HACS, añade como repositorio personalizado:
 
 ```text
-https://github.com/AcTweeteR/homeassistant
+https://github.com/AcTweeteR/hass-livoltek
 ```
 
 Selecciona la categoría **Integración**.
@@ -29,6 +29,7 @@ Necesitarás la API key, `secuid`, user token y Site ID del portal Livoltek. La
 integración consulta los datos del inversor mediante cloud polling y crea
 sensores de batería, red, producción solar y energía diaria.
 
-Livoltek no es un add-on y no debe instalarse desde la tienda de complementos.
-Consulta las [guías completas en inglés](docs/README.md) para diagnóstico,
-actualizaciones y soporte.
+Livoltek no es un add-on. Este repositorio contiene únicamente esta integración
+HACS y no instala dashboards, tarjetas Lovelace ni servicios de control del
+inversor. Consulta las [guías completas en inglés](docs/README.md) para
+diagnóstico, actualizaciones y soporte.

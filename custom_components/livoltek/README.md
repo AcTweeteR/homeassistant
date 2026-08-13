@@ -18,4 +18,4 @@ User documentation is maintained at repository level:
 - [Troubleshooting](../../docs/troubleshooting.md)
 
 This directory must be installed as `custom_components/livoltek/` by HACS. It
-is not a Home Assistant OS add-on and must not be copied into `addons/`.
+is not a Home Assistant OS add-on and is distributed only through HACS.

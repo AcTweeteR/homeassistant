@@ -5,10 +5,10 @@
     "@AcTweeteR"
   ],
   "config_flow": true,
-  "documentation": "https://github.com/AcTweeteR/homeassistant",
+  "documentation": "https://github.com/AcTweeteR/hass-livoltek",
   "integration_type": "device",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/AcTweeteR/homeassistant/issues",
+  "issue_tracker": "https://github.com/AcTweeteR/hass-livoltek/issues",
   "requirements": [
     "pylivoltek==1.0.9"
   ],
