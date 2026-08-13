@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.0.2
+
+- Added complete Spanish user documentation for installation, configuration,
+  sensors, diagnostics, maintenance and development.
+- Added official `repository.yaml` metadata for the Home Assistant OS add-on
+  repository flow.
+- Added clear separation between HACS integrations and future Home Assistant OS
+  add-ons.
+- Added descriptions for the repository areas, workflows, tests, scripts and
+  development configuration.
+- Added security guidance for reporting issues and protecting cloud credentials.
+
 ## 1.0.1
 
 - Removed unused imports reported by Ruff.

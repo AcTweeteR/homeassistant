@@ -1,78 +1,144 @@
-# Home Assistant Custom Repository
-
-Repositorio de integraciones y futuros add-ons de Home Assistant mantenidos por
-AcTweeteR. La primera integración publicada es Livoltek, una adaptación de
-`hass-livoltek` para versiones actuales de Home Assistant.
+# AcTweeteR Home Assistant
 
 [![HACS validation](https://github.com/AcTweeteR/homeassistant/actions/workflows/validate.yml/badge.svg)](https://github.com/AcTweeteR/homeassistant/actions/workflows/validate.yml)
+[![Lint](https://github.com/AcTweeteR/homeassistant/actions/workflows/lint.yml/badge.svg)](https://github.com/AcTweeteR/homeassistant/actions/workflows/lint.yml)
+[![Latest release](https://img.shields.io/github/v/release/AcTweeteR/homeassistant?display_name=tag&sort=semver)](https://github.com/AcTweeteR/homeassistant/releases)
+[![HACS](https://img.shields.io/badge/HACS-custom%20integration-41BDF5.svg)](https://hacs.xyz/)
 [![License](https://img.shields.io/github/license/AcTweeteR/homeassistant)](LICENSE)
 
-## Añadirlo a Home Assistant
+Repositorio público para integraciones y futuros complementos de Home Assistant
+mantenidos por **AcTweeteR**. Está preparado para dos ecosistemas distintos:
 
-### HACS
+| Proyecto | Instalación | Estado |
+| --- | --- | --- |
+| Integración **Livoltek** | HACS | Disponible |
+| Futuros add-ons de Home Assistant OS | Tienda de complementos | Estructura preparada |
+
+> **Importante:** Livoltek es una integración de Home Assistant, no un add-on.
+> Se instala con HACS. La tienda de complementos solo mostrará proyectos que
+> se publiquen dentro de `addons/` con un `config.yaml` válido.
+
+## Instalación rápida
+
+### Livoltek con HACS
 
 [![Abrir en HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=AcTweeteR&repository=homeassistant&category=integration)
 
-También se puede añadir manualmente en HACS como repositorio personalizado:
+1. Abre el botón anterior o entra en **HACS > Integraciones**.
+2. Busca **Livoltek** y pulsa **Descargar**.
+3. Reinicia Home Assistant si HACS lo solicita.
+4. Ve a **Configuración > Dispositivos y servicios > Añadir integración**.
+5. Busca **Livoltek** y completa el formulario.
 
-1. Abrir HACS y entrar en **Integraciones**.
-2. Abrir el menú de tres puntos y elegir **Repositorios personalizados**.
-3. Añadir `https://github.com/AcTweeteR/homeassistant` con categoría **Integración**.
-4. Buscar **Livoltek** e instalarla.
+Si todavía no aparece en el catálogo de HACS, añade manualmente este
+repositorio desde **HACS > Integraciones > menú de tres puntos > Repositorios
+personalizados**, con categoría **Integración**:
 
-### Repositorio de add-ons
+```text
+https://github.com/AcTweeteR/homeassistant
+```
 
-[![Añadir repositorio de add-ons](https://my.home-assistant.io/badges/supervisor_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FAcTweeteR%2Fhomeassistant)
+### Tienda de complementos de Home Assistant OS
 
-El repositorio incluye la carpeta `addons/` reservada para futuras aplicaciones.
-Actualmente no contiene un add-on instalable; cuando se publique el primero se
-podrá instalar desde **Configuración > Add-ons > Repositorios**.
+[![Añadir repositorio a Home Assistant](https://my.home-assistant.io/badges/supervisor_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FAcTweeteR%2Fhomeassistant)
 
-## Livoltek
+El repositorio incluye el `repository.yaml` oficial y puede añadirse desde:
 
-La integración consulta el portal cloud de Livoltek y crea sensores de:
+**Configuración > Complementos > Tienda de complementos > menú de tres puntos >
+Repositorios**
 
-| Sensor | Unidad o significado |
-| --- | --- |
-| Estado de batería | Porcentaje |
-| Potencia de red | kW |
-| Potencia fotovoltaica | kW |
-| Potencia de carga | kW |
-| Potencia energética | kW |
-| Energía importada de red | kWh diarios |
-| Energía exportada a red | kWh diarios |
-| Generación solar | kWh diarios |
+También se puede pegar manualmente:
 
-La configuración se realiza desde **Configuración > Dispositivos y servicios**.
-Se necesita la API key, el `secuid`, el user token y el identificador del sitio
-que proporciona el portal Livoltek.
+```text
+https://github.com/AcTweeteR/homeassistant
+```
 
-### Cambios de esta adaptación
+Esta acción deja preparado el catálogo para futuros complementos. Actualmente
+no se publica un add-on ficticio: crear uno vacío daría una falsa sensación de
+instalación funcional. Cuando se publique el primero, aparecerá bajo
+`addons/<slug>/` y quedará disponible en la misma tienda.
+
+## Integración Livoltek
+
+Livoltek consulta el portal cloud del inversor y crea un dispositivo con
+sensores de producción, red, batería y energía diaria. La configuración se
+realiza íntegramente desde la interfaz de Home Assistant; no es necesario
+editar `configuration.yaml`.
+
+### Datos necesarios
+
+El portal debe proporcionar la API key, el `secuid`, el user token y el Site ID
+de la instalación. La integración usa esos datos únicamente para consultar la
+API cloud configurada por el usuario.
+
+### Sensores
+
+| Sensor | Unidad | Significado |
+| --- | --- | --- |
+| Estado de batería | `%` | Nivel de carga de la batería |
+| Potencia de red | `kW` | Importación o exportación instantánea |
+| Potencia fotovoltaica | `kW` | Producción solar instantánea |
+| Potencia de carga | `kW` | Potencia destinada a la batería |
+| Potencia energética | `kW` | Potencia energética comunicada por el portal |
+| Energía importada de red | `kWh` | Acumulado diario de importación |
+| Energía exportada a red | `kWh` | Acumulado diario de exportación |
+| Generación solar | `kWh` | Acumulado diario de generación |
+
+Los sensores diarios están marcados como `total_increasing` y pueden utilizarse
+en el panel Energía de Home Assistant.
+
+### Adaptaciones incluidas
 
 - Compatibilidad con las APIs actuales de Home Assistant.
-- Coordinador basado en `DataUpdateCoordinator` con intervalo de 2 minutos y 30 segundos.
-- Timeouts para evitar bloqueos del ciclo de Home Assistant.
-- Renovación del token cuando el portal devuelve listas vacías tras caducar la sesión.
-- Conservación del último dato válido cuando el inversor está apagado o el portal no devuelve datos temporales.
-- Validación más defensiva de respuestas del portal y diagnósticos de la integración.
-- Sensores de energía diaria con estado `total_increasing`.
+- Flujo de configuración moderno y diagnóstico de la integración.
+- `DataUpdateCoordinator` con consulta aproximada cada 2 minutos y 30 segundos.
+- Timeouts para evitar bloqueos del ciclo principal de Home Assistant.
+- Renovación del token tras respuestas vacías repetidas del portal.
+- Conservación del último dato válido cuando el inversor está apagado o el
+  portal entrega una respuesta temporalmente vacía.
+- Validación defensiva de respuestas incompletas o inesperadas.
+- Sensores diarios de energía compatibles con el panel Energía.
 
-La adaptación parte del proyecto original de Adam Lonsdale:
-[adamlonsdale/hass-livoltek](https://github.com/adamlonsdale/hass-livoltek),
-publicado bajo licencia MIT. Se mantiene la atribución original en
-[LICENSE](LICENSE).
+La adaptación parte de [hass-livoltek](https://github.com/adamlonsdale/hass-livoltek),
+de Adam Lonsdale, bajo licencia MIT. La atribución y la licencia se conservan
+en [LICENSE](LICENSE).
 
-## Actualizaciones
+## Documentación
 
-Una vez instalada mediante HACS, las nuevas versiones se ofrecerán desde el
-gestor de actualizaciones de HACS. Las actualizaciones solo cambian los
-archivos de la integración y no eliminan la configuración de los dispositivos.
+| Documento | Contenido |
+| --- | --- |
+| [Instalación](docs/installation.md) | HACS, repositorios personalizados y tienda de add-ons |
+| [Configuración](docs/configuration.md) | Credenciales y comportamiento cloud |
+| [Entidades](docs/sensors.md) | Sensores, unidades y panel Energía |
+| [Diagnóstico](docs/troubleshooting.md) | Problemas frecuentes y datos seguros para soporte |
+| [Mantenimiento](docs/maintenance.md) | Actualización, rollback y seguridad |
+| [Desarrollo](docs/development.md) | Estructura, validaciones y futuros add-ons |
+| [Changelog](CHANGELOG.md) | Historial de versiones |
+| [Contribuir](CONTRIBUTING.md) | Issues, pull requests y estilo de código |
 
-## Diagnóstico y contribuciones
+## Estructura del repositorio
 
-Para informar de un problema, incluye la versión de Home Assistant, la versión
-de la integración, el modelo del inversor y los diagnósticos generados desde la
-integración. No publiques API keys, tokens ni capturas que los contengan.
+```text
+custom_components/livoltek/  Código de la integración HACS
+tests/                        Pruebas automatizadas sin credenciales reales
+addons/                       Futuros complementos para Home Assistant OS
+docs/                         Documentación de instalación y mantenimiento
+.github/                      Workflows, plantillas de issues y automatización
+config/                       Configuración de ejemplo para desarrollo
+scripts/                      Utilidades de desarrollo y validación
+```
 
-Las contribuciones son bienvenidas. Consulta [CONTRIBUTING.md](CONTRIBUTING.md)
-antes de abrir una pull request.
+Cada área tiene una descripción local cuando contiene varios archivos. Consulta
+[docs/README.md](docs/README.md) para el índice completo.
+
+## Actualizaciones y soporte
+
+HACS ofrece las nuevas releases desde su panel de actualizaciones. Antes de
+actualizar, revisa [CHANGELOG.md](CHANGELOG.md) y conserva una copia de
+seguridad reciente de Home Assistant. Para informar de un problema, incluye
+las versiones de Home Assistant y Livoltek, el modelo del inversor, la hora del
+fallo y un diagnóstico sin secretos.
+
+No publiques API keys, tokens, contraseñas, `secuid` completos ni copias de
+seguridad en issues o pull requests. Las dudas y propuestas se gestionan en
+[Issues](https://github.com/AcTweeteR/homeassistant/issues).
